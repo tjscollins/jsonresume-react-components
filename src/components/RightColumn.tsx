@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Projects from './Projects';
 import Summary from './Summary';
 import Work from './Work';
 
@@ -12,6 +13,7 @@ class RightResumeColumn extends React.Component<ResumeProps> {
             <div className="right-column">
                 <Summary resumeData={resumeData}/>
                 <Work resumeData={resumeData} />
+                <Projects resumeData={resumeData} />
                 {/* {{> summary}}
                 {{> work }}
                 {{> projects }}

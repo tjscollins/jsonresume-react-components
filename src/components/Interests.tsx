@@ -11,14 +11,14 @@ const InterestsSection = ({ resumeData: { interests }}: ResumeProps) => (
 
 const Interest = ({ name, keywords }: Interest) => (
     <section className="interests__item">
-        <span className="bold">{{name}}</span>
+        <span className="bold">{name}</span>
         <ul className="interests__item__keyword-list">
             {keywords ? keywords.map((keyword) => (
                 <li className="interests__item__keyword-list__item">
                     {keyword}
                 </li>
             )) : null}
-            </ul>
+        </ul>
     </section>
 );
 
