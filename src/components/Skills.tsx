@@ -13,23 +13,20 @@ const SkillsSection = ({ resumeData: { skills }}: ResumeProps) => (
 );
 
 const SkillComponent = (skill: any) => (
-    <section key={v4()} className="skills__skill container">
-        {skill.name ? <SkillName name={skill.name} /> : null}
+    <section key={v4()} className="skills__item container">
+        {skill.name ? 
+        <SectionHeader
+            className="skills__item__header"
+            level={3}
+            name={skill.name}
+        /> : null}
         {skill.keywords.length ? <SkillList items={skill.keywords} /> : null}
     </section>
 );
 
-const SkillName = ({ name }: { name: string }) => (
-    <SectionHeader
-        className="skills__skill-header"
-        level={3}
-        name={name}
-    />
-);
-
 const SkillList = ({ items }: { items: string[] }) => (
-    <ul className="skills__skill__list">
-        {items.map((keyword: string) => (<li key={v4()} className="skills__skill__list__item">{keyword} </li>))}
+    <ul className="skills__item__keyword-list">
+        {items.map((keyword: string) => (<li key={v4()} className="skills__item__keyword-list__item">{keyword} </li>))}
     </ul>
 );
 
