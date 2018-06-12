@@ -5,11 +5,25 @@ export interface ResumeProps {
 export interface JSONResume {
     basics: ResumeBasics
     work: Job[]
-    projects: any[]
     education: any[]
     skills: any[],
     languages: Language[]
     interests: Interest[]
+    projects: OSProject[]
+}
+
+export interface OSProject {
+    title: string
+    category: string
+    role: string
+    url: string
+    startDate?: string
+    endDate?: string
+    releaseDate?: string
+    repo: string
+    summary: string
+    highlights: string[]
+    keywords: string[]
 }
 
 export interface Interest {
