@@ -12,7 +12,7 @@ const InterestsSection = ({ resumeData: { interests }}: ResumeProps) => (
 
 const Interest = ({ name, keywords }: Interest) => (
     <section key={v4()} className="interests__item">
-        <span className="bold">
+        <span className="interests__item__title">
             { name }
         </span>
         <ul className="interests__item__keyword-list">

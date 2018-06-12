@@ -36,16 +36,16 @@ interface ISHProps {
     releaseDate?: string
 }
 
-const SectionHeader = ({ name, level, website, startDate, endDate, releaseDate }: ISHProps) => (
-    <div className="section-header clearfix">
+const SectionHeader = ({ name, level, website, startDate, endDate, releaseDate, className }: ISHProps & React.HTMLAttributes<any>) => (
+    <div className={`${className} clearfix`}>
         { name ? 
-        <DynamicHeader level={level} className="section-header__title pull-left">
+        <DynamicHeader level={level} className={`${className}__title pull-left`}>
             {website ?
                 <a href={`${website}`} target="_blank">
                     {name}
                 </a> : name }
         </DynamicHeader> : null }
-        <span className="section-header__date italic pull-right">
+        <span className={`${className}__date pull-right`}>
             {startDate && endDate ? 
                 <div>
                     <span className="startDate">{formatDate(startDate)}</span> 

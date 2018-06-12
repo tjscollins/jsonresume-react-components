@@ -25,6 +25,7 @@ const Publication = (publication: Publication) => {
             <SectionHeader
                 level={3}
                 name={publication.name}
+                website={publication.website}
             />
             {publication.publisher ? <h5 className="awarder">{publication.publisher}</h5> : null }
 

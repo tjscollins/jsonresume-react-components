@@ -5,7 +5,7 @@ import { Location, ResumeBasics, ResumeProps, SocialMediaProfile } from './types
 import { emailLink, formatAddress, notEmail, removeProtocol } from './util';
 
 const AboutSection = ({ resumeData: { basics }}: ResumeProps) => (
-    <section className="container about-container">
+    <section className="about">
         <h2>Contact</h2>
         <Location location={basics.location} />
         <Email email={basics.email} />
@@ -16,7 +16,7 @@ const AboutSection = ({ resumeData: { basics }}: ResumeProps) => (
 );
 
 const Profiles = ({ profiles }: ResumeBasics) => (
-    <div>
+    <div className="about__profiles">
         {profiles.map(
             profile => <Social key={uuidv4()} profile={profile} />
         )}
@@ -57,14 +57,14 @@ interface InfoProps {
 }
 
 const InfoTag = ({ text, icon, url }: InfoProps) => (
-    <div className="contact-info__item">
-        {icon ? <i className={`contact-info__icon ${icon}`} /> : '' }
+    <div className="about__info">
+        {icon ? <i className={`about__info__icon ${icon}`} /> : '' }
         {url ? 
-            <a className="contact-info__text" href={url} target={notEmail(url) ? "_blank" : undefined }>
+            <a className="about__info__text" href={url} target={notEmail(url) ? "_blank" : undefined }>
                     {removeProtocol(text)}
             </a>
         :
-            <span className="contact-info__text">{text}</span>
+            <span className="about__info__text">{text}</span>
         }
     </div>  
 );

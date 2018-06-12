@@ -24,6 +24,7 @@ export interface Publication {
     name: string
     publisher?: string
     summary?: string
+    website?: string
 }
 
 export interface Education {
