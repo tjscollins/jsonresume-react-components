@@ -1,0 +1,222 @@
+{
+    "basics": {
+        "label": "Full Stack Developer",
+        "characterClass": "Programmer",
+        "quote": "",
+        "website": "http://tjscollins.me",
+        "phone": "1-661-524-6223",
+        "email": "tjscollins@gmail.com",
+        "other": [{}],
+        "name": "Tyler Collins",
+        "summary": "I am a Full Stack Developer with experience developing database-driven web applications using a variety of technologies including Clojure, React, Node.js, SQL databases, and MongoDB.  With a background in political organizing and education, I’m most interested in building applications that help people connect information to their lives in immediate and personal ways.",
+        "profiles": [{
+                "network": "GitHub",
+                "username": "tjscollins",
+                "url": "https://github.com/tjscollins"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "tjscollins",
+                "url": "https://linkedin.com/in/tjscollins"
+            }
+        ]
+    },
+    "work": [{
+            "company": "CNMI Public School System",
+            "website": "http://cnmipss.org",
+            "position": "Webmaster",
+            "startDate": "2017-06",
+            "summary": "Full Stack Developer, System Administrator, and Content Policy manager for a public school district serving 10,000 students in the Commonwealth of the Northern Mariana Islands.  Hired as an on-site employee, but transitioned to working full time remotely since January 2018.",
+            "highlights": [
+                "Designed and developed WCAG 2.0 Level AA conformant site from initial development to website launch to comply with Department of Education accessibility mandate.",
+                "Developed Clojure / Clojurescript SPAs backed by Postgresql using React on the front-end for internal use to manage and automate the publication of records and documents in WCAG 2.0 conformant formats.",
+                "Developed a Node.js web crawler to automate testing for accessibility issues across all pages of the district website and generate html reports from resulting data.",
+                "Designed and developed functionality using Clojure to automate the manual process of identifying 5,000 students eligible for free or reduced-price meals by matching records in the state database with federal SNAP registrations, gracefully fixing frequent erroneous records (e.g. spelling errors and date typos)."
+            ]
+        },
+        {
+            "company": "CNMI Public School System",
+            "website": "http://cnmipss.org",
+            "position": "Classroom Teacher",
+            "startDate": "2011-08",
+            "endDate": "2017-06",
+            "summary": "Taught Advanced Placement Literature and Composition, Technical and Business Writing, and Chemistry and Physical Science in a school serving a predominantly ELL community.",
+            "highlights": [
+                "Developed and taught an Advaced Placement Literature course for college-bound seniors.",
+                "English Language Arts Department Chair from 2012-2014",
+                "Developed new curriculum plans and materials for 9th Grade English Language arts course."
+            ]
+        }
+    ],
+    "projects": [{
+            "title": "axe-crawler",
+            "category": "Node.js command line utility",
+            "role": "Creator",
+            "url": "https://npmjs.org/package/axe-crawler",
+            "start": "2017-10",
+            "repo": "https://github.com/tjscollins/axe-crawler",
+            "summary": "A web crawler for performing automated accessibility tests across all pages of a website and creating an html summary report of the results for publication or distribution",
+            "highlights": [
+                "Designed and developed a webcrawler that uses axe-core and selenium to run accessibility tests for WCAG 2.0 and WAI-ARIA guidelines across all pages of a website."
+            ],
+            "keywords": ["Node.js", "Javascript", "a11y", "Test Driven Development"],
+            "media": []
+        },
+        {
+            "title": "Trailmaster",
+            "category": "Single Page Web Application",
+            "role": "Creator",
+            "url": "http://trailmaster.herokuapp.com",
+            "start": "2016-11",
+            "repo": "https://github.com/tjscollins/trailmaster",
+            "summary": "A web application for collecting, storing, and using geoJSON data for running clubs to design and navigate new trail runs.",
+            "highlights": [
+                "Designed and developed the TrailMaster SPA for collecting, storing, and using geoJSON data for running clubs to design and navigate new trail runs from the ground up using React, Redux, NodeJS, Express, and MongoDB.",
+                "Responsible for continuing maintenance and implementation of new features in response to user input and feedback."
+            ],
+            "keywords": [
+                "Javascript", "React", "Redux", "MongoDB", "Node.js", "Express"
+            ],
+            "media": []
+        }
+    ],
+    "education": [{
+        "institution": "California State University Bakersfield",
+        "location": "Bakersfield, Ca",
+        "studyType": "B.A.",
+        "area": "English Literature",
+        "specialization": "Minor in Physics",
+        "courses": [],
+        "releaseDate": "2011-06"
+    }, {
+        "institution": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/tjscollins/front-end-certification",
+        "studyType": "Front-End Development Certificate",
+        "area": "",
+        "releaseDate": "2016-10"
+    }, {
+        "institution": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/tjscollins/data-visualization-certification",
+        "studyType": "Data Visualization Certificate",
+        "area": "",
+        "releaseDate": "2016-12"
+    }, {
+        "institution": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/tjscollins/back-end-certification",
+        "studyType": "Back-End Development Certificate",
+        "area": "",
+        "releaseDate": "2017-04"
+    }],
+    "skills": [{
+            "name": "Web Development",
+            "level": "intermediate",
+            "keywords": [
+                "HTML5",
+                "CSS",
+                "Javascript",
+                "LAMP",
+                "Clojure",
+                "REST",
+                "Test Driven Development"
+            ]
+        },
+        {
+            "name": "Javascript",
+            "level": "intermediate",
+            "keywords": [
+                "React",
+                "Redux",
+                "Jest",
+                "Node.js",
+                "Express",
+                "Mongoose",
+                "jQuery"
+            ]
+        },
+        {
+            "name": "Clojure",
+            "level": "intermediate",
+            "keywords": [
+                "Functional Programming",
+                "Clojurescript",
+                "Reagent",
+                "Re-frame",
+                "Luminus",
+                "clojure.spec",
+                "clojure.test"
+            ]
+        },
+        {
+            "name": "Python",
+            "level": "intermediate",
+            "keywords": [
+                "Object Oriented Programming",
+                "Python3",
+                "unittest",
+                "selenium"
+            ]
+        },
+        {
+            "name": "Databases",
+            "level": "intermediate",
+            "keywords": [
+                "SQL",
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB",
+                "ORM"
+            ]
+        },
+        {
+            "name": "Project Management",
+            "level": "beginner",
+            "keywords": [
+                "Agile",
+                "Kanban",
+                "Git"
+            ]
+        }
+    ],
+    "volunteer": [{
+        "flavor": "volunteer",
+        "organization": "freeCodeCamp",
+        "position": "Full Stack Developer",
+        "startDate": "2017-05",
+        "endDate": "2017-10",
+        "website": "http://freeCodeCamp.org",
+        "summary": "Developed full stack web applications for non-profit organizations working with freeCodeCamp",
+        "highlights": [
+            "Improved test coverage from 0% to over 50% for freeCodeCamp's student tracking application for education non-profits using Mocha on Node.js"
+        ]
+    }],
+    "publications": [{
+        "name": "Code Notes Blog",
+        "website": "http://tjscollins.me/blog"
+    }],
+    "interests": [{
+            "name": "Reading",
+            "keywords": [
+                "Computer Programming",
+                "Software Engineering",
+                "Science Fiction",
+                "Literary Fiction"
+            ]
+        },
+        {
+            "name": "Hiking"
+        },
+        {
+            "name": "SUP"
+        }
+    ],
+    "references": 0,
+    "languages": [{
+            "language": "English",
+            "fluency": "Native"
+        },
+        {
+            "language": "Spanish",
+            "fluency": "Conversational"
+        }
+    ]
+}
