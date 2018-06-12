@@ -5,8 +5,8 @@ import { Education, ResumeProps } from './types';
 import { formatDegree } from './util';
 
 const EducationSection = ({resumeData: { education } }: ResumeProps) => (
-    <div className="container volunteer-container">
-        <h2>Volunteer</h2>
+    <div className="container education-container">
+        <h2>Education</h2>
 
         {education.map(Education)}
     </div>

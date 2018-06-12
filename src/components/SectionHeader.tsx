@@ -46,10 +46,18 @@ const SectionHeader = ({ name, level, website, startDate, endDate, releaseDate }
                 </a> : name }
         </DynamicHeader> : null }
         <span className="section-header__date italic pull-right">
-            {startDate ? 
-                <span className="startDate">{formatDate(startDate)}</span> : null }
-            {endDate ? <span className="endDate"> - {formatDate(endDate)}</span> :
-                <span className="endDate"> - Present</span> }
+            {startDate && endDate ? 
+                <div>
+                    <span className="startDate">{formatDate(startDate)}</span> 
+                    <span className="endDate"> - {formatDate(endDate)}</span>
+                </div>
+                :
+            startDate ?  
+            <div>
+                <span className="startDate">{formatDate(startDate)}</span> 
+                <span className="endDate"> - Present</span>
+            </div> : null}
+
             {releaseDate ? formatDate(releaseDate) : null }
         </span>
     </div>
