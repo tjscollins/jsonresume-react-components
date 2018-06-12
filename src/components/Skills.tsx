@@ -28,7 +28,7 @@ const SkillName = ({ name }: { name: string }) => (
 );
 
 const SkillList = ({ items }: { items: string[] }) => (
-    <ul className="skills_skill_list">
+    <ul className="skills__skill__list">
         {items.map((keyword: string) => (<li key={v4()} className="skills__skill__list__item">{keyword} </li>))}
     </ul>
 );
