@@ -10,6 +10,17 @@ export interface JSONResume {
     languages: Language[]
     interests: Interest[]
     projects: OSProject[]
+    volunteer: VolunteerWork[]
+}
+
+export interface VolunteerWork {
+    organization: string
+    position: string
+    startDate?: string
+    endDate?: string
+    website?: string
+    summary: string
+    highlights?: string[]
 }
 
 export interface OSProject {
