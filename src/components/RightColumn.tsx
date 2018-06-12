@@ -3,21 +3,15 @@ import * as React from 'react';
 import Summary from './Summary';
 import Work from './Work';
 
-import { JSONResume } from './types';
+import { ResumeProps } from './types';
 
-interface IColumnProps {
-    data: JSONResume
-}
-
-
-class RightResumeColumn extends React.Component<IColumnProps> {
-
+class RightResumeColumn extends React.Component<ResumeProps> {
     public render() {
-        const { data } = this.props;
+        const { resumeData } = this.props;
         return (
             <div className="right-column">
-                <Summary summary={data.basics.summary}/>
-                <Work work={data.work} />
+                <Summary resumeData={resumeData}/>
+                <Work resumeData={resumeData} />
                 {/* {{> summary}}
                 {{> work }}
                 {{> projects }}

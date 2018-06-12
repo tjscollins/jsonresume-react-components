@@ -3,13 +3,9 @@ import * as React from 'react';
 import AboutSection from './About';
 import SkillsSection from './Skills';
 
-import { JSONResume } from './types';
-
-interface IColumnProps {
-    data: JSONResume
-}
+import { ResumeProps } from './types';
  
-class LeftResumeColumn extends React.Component<IColumnProps> {
+class LeftResumeColumn extends React.Component<ResumeProps> {
 
     public render() {
         return (

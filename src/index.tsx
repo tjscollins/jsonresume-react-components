@@ -1,3 +1,17 @@
-import Components from './components/index';
+import DefaultResume from './components/Resume';
 
-export default Components;
+import About from './components/About';
+import Header from './components/Header';
+import Skills from './components/Skills';
+import Summary from './components/Summary';
+import Work from './components/Work';
+
+export {
+    About,
+    Header,
+    Skills,
+    Summary,
+    Work,
+};
+
+export default DefaultResume

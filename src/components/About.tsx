@@ -1,14 +1,10 @@
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import { JSONResume, Location, ResumeBasics, SocialMediaProfile } from './types';
+import { Location, ResumeBasics, ResumeProps, SocialMediaProfile } from './types';
 import { concat, emailLink, formatAddress, notEmail, removeProtocol } from './util';
 
-interface IAboutSectionProps {
-    data: JSONResume
-}
-
-const AboutSection = ({ data: { basics }}: IAboutSectionProps) => (
+const AboutSection = ({ resumeData: { basics }}: ResumeProps) => (
     <section className="container about-container">
         <h2>Contact</h2>
         <Location location={basics.location} />

@@ -1,10 +1,8 @@
 import * as React from 'react';
 
-interface IProps {
-    summary: string
-}
+import { ResumeProps } from './types';
 
-const Summary = ({ summary }: IProps) => (
+const Summary = ({ resumeData: { basics: { summary }}}: ResumeProps) => (
     <div className="container summary-container">
         {/* <h2>Summary</h2> */}
         <p className="summary">

@@ -1,15 +1,8 @@
 import * as React from 'react';
 
-interface IProps {
-    data: {
-        skills: Array<{
-            name: string
-            keywords: string[]
-        }>
-    }
-}
+import { ResumeProps } from './types';
 
-const SkillsSection = ({ data: { skills }}: IProps) => (
+const SkillsSection = ({ resumeData: { skills }}: ResumeProps) => (
     <section className="container skills-container">
         <h2>Skills</h2>
         {skills.map(SkillComponent)}

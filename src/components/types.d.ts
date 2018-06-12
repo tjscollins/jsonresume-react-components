@@ -1,3 +1,7 @@
+export interface ResumeProps {
+    resumeData: JSONResume
+}
+
 export interface JSONResume {
     basics: ResumeBasics
     work: Job[]

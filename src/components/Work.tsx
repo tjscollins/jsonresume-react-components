@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {formatDate} from './util';
 
-import { Job } from './types';
+import { Job, ResumeProps } from './types';
 
-const Work = ({ work }: { work: Job[]}) => (
+const Work = ({ resumeData: { work }}: ResumeProps) => (
     <div className="container work-container">
         <h2>Work Experience</h2>
 

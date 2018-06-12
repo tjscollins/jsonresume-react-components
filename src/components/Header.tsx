@@ -1,11 +1,8 @@
 import * as React from 'react';
 
-interface IHeaderProps {
-    name: string
-    label: string
-}
+import { ResumeProps } from './types';
 
-const ResumeHeader = ({ name, label }: IHeaderProps) => (
+const ResumeHeader = ({ resumeData: { basics: { name, label }}}: ResumeProps) => (
     <header className="resume-header clearfix">
         <div className="profile-header pull-left">
             <div className="resume-title">

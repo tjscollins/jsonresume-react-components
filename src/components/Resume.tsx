@@ -4,19 +4,14 @@ import ResumeHeader from './Header';
 import LeftResumeColumn from './LeftColumn';
 import RightResumeColumn from './RightColumn';
 
-import { JSONResume } from './types';
+import { ResumeProps } from './types';
 
-interface IProps {
-    resumeData: JSONResume
-}
-
-const DefaultResume = ({ resumeData }: IProps) => (
+const DefaultResume = ({ resumeData }: ResumeProps) => (
     <div className="resume-content">
         <ResumeHeader 
-            name={resumeData.basics.name} 
-            label={resumeData.basics.label} />
-        <LeftResumeColumn data={resumeData} />
-        <RightResumeColumn data={resumeData} />
+            resumeData={resumeData} />
+        <LeftResumeColumn resumeData={resumeData} />
+        <RightResumeColumn resumeData={resumeData} />
     </div>
 );
 
