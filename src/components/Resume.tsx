@@ -7,11 +7,13 @@ import RightResumeColumn from './RightColumn';
 import { ResumeProps } from './types';
 
 const DefaultResume = ({ resumeData }: ResumeProps) => (
-    <div className="resume-content">
+    <div className="resume">
         <ResumeHeader 
             resumeData={resumeData} />
-        <LeftResumeColumn resumeData={resumeData} />
-        <RightResumeColumn resumeData={resumeData} />
+        <div className="resume__content">
+            <LeftResumeColumn resumeData={resumeData} />
+            <RightResumeColumn resumeData={resumeData} />
+        </div>
     </div>
 );
 
