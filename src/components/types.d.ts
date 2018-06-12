@@ -7,7 +7,19 @@ export interface JSONResume {
     work: Job[]
     projects: any[]
     education: any[]
-    skills: any[]
+    skills: any[],
+    languages: Language[]
+    interests: Interest[]
+}
+
+export interface Interest {
+    name: string,
+    keywords: string[]
+}
+
+export interface Language {
+    language: string
+    fluency: string
 }
 
 export interface Job {

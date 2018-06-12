@@ -11,7 +11,6 @@ module.exports = {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
-
   module: {
     rules: [
         {
@@ -24,7 +23,6 @@ module.exports = {
                 presets: ['env']
               }
             }
-    
         }
     ]
   },
