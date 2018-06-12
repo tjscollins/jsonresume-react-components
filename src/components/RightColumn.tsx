@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Education from './Education';
 import Projects from './Projects';
 import Summary from './Summary';
 import Volunteering from './Volunteering';
@@ -16,10 +17,10 @@ class RightResumeColumn extends React.Component<ResumeProps> {
                 <Work resumeData={resumeData} />
                 <Projects resumeData={resumeData} />
                 <Volunteering resumeData={resumeData} />
-                {/* <Education resumeDate={resumeData} /> */}
-                {/* <Awards resumeDate={resumeData} /> */}
-                {/* <Publications resumeDate={resumeData} /> */}
-                {/* <References resumeDate={resumeData} /> */}
+                <Education resumeData={resumeData} />
+                {/* <Awards resumeData={resumeData} /> */}
+                {/* <Publications resumeData={resumeData} /> */}
+                {/* <References resumeData={resumeData} /> */}
             </div>
         );
     }

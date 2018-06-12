@@ -3,6 +3,10 @@ import * as moment from 'moment';
 
 import { Location } from './types';
 
+export function formatDegree(type: string, area: string): string {
+    return `${type} ${area}`;
+}
+
 export function emailLink(email: string): string {
     return `mailto:${email}`;
 }
