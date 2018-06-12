@@ -2,7 +2,7 @@ import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import { Location, ResumeBasics, ResumeProps, SocialMediaProfile } from './types';
-import { concat, emailLink, formatAddress, notEmail, removeProtocol } from './util';
+import { emailLink, formatAddress, notEmail, removeProtocol } from './util';
 
 const AboutSection = ({ resumeData: { basics }}: ResumeProps) => (
     <section className="container about-container">
@@ -26,22 +26,22 @@ const Profiles = ({ profiles }: ResumeBasics) => (
 const Social = ({ profile }: { profile: SocialMediaProfile }) => {
     if ( profile.network && profile.username ) {
         if (profile.network.toLowerCase() === 'linkedin') {
-            return <InfoTag text={concat('in/', profile.username)} icon='fa-linkedin-square' />
+            return <InfoTag text={'in/' + profile.username} icon='fab fa-linkedin' />
         } else {
-            return <InfoTag text={profile.username} icon={`fa-${profile.network.toLowerCase()}`} />
+            return <InfoTag text={profile.username} icon={`fab fa-${profile.network.toLowerCase()}`} />
         }
     }
     return null;   
 }
 
-const Website = ({ url }: { url: string }) => <InfoTag text={url} icon="fa-desktop" url={url} />;
+const Website = ({ url }: { url: string }) => <InfoTag text={url} icon="fa fa-desktop" url={url} />;
 
 const Phone = ({ tel }: { tel: string }) => (
-    <InfoTag text={tel} icon="fa-mobile fa-2x" />
+    <InfoTag text={tel} icon="fa fa-mobile fa-2x" />
 )
 
 const Email = ({ email }: { email: string }) => (
-    <InfoTag text={email} icon="fa-envelope-o" url={emailLink(email)} />
+    <InfoTag text={email} icon="far fa-envelope" url={emailLink(email)} />
 );
 
 const Location = ({ location }: { location?: Location }) => {
@@ -62,7 +62,7 @@ interface InfoProps {
 
 const InfoTag = ({ text, icon, url }: InfoProps) => (
     <div className="contact-info__item">
-        {icon ? <i className={`contact-info__icon fa ${icon}`} /> : '' }
+        {icon ? <i className={`contact-info__icon ${icon}`} /> : '' }
         {url ? 
             <a className="contact-info__text" href={url} target={notEmail(url) ? "_blank" : undefined }>
                     {removeProtocol(text)}

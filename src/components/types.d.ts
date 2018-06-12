@@ -11,6 +11,19 @@ export interface JSONResume {
     projects: OSProject[]
     volunteer: VolunteerWork[]
     education: Education[]
+    publications: Publication[]
+    references: Reference[]
+}
+
+export interface Reference {
+    reference: string
+    name: string
+}
+
+export interface Publication {
+    name: string
+    publisher?: string
+    summary?: string
 }
 
 export interface Education {

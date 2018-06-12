@@ -1,7 +1,9 @@
 import * as React from 'react';
 
+// import Awards from './Awards';
 import Education from './Education';
 import Projects from './Projects';
+import Publications from './Publications';
 import Summary from './Summary';
 import Volunteering from './Volunteering';
 import Work from './Work';
@@ -19,7 +21,7 @@ class RightResumeColumn extends React.Component<ResumeProps> {
                 <Volunteering resumeData={resumeData} />
                 <Education resumeData={resumeData} />
                 {/* <Awards resumeData={resumeData} /> */}
-                {/* <Publications resumeData={resumeData} /> */}
+                <Publications resumeData={resumeData} />
                 {/* <References resumeData={resumeData} /> */}
             </div>
         );
