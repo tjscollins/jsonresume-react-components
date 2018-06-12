@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {v4} from 'uuid';
 
 import { ResumeProps } from './types';
 
@@ -10,7 +11,7 @@ const SkillsSection = ({ resumeData: { skills }}: ResumeProps) => (
 );
 
 const SkillComponent = (skill: any) => (
-    <section className="skill container">
+    <section key={v4()} className="skill container">
         {skill.name ? <SkillName name={skill.name} /> : null}
         {skill.keywords.length ? <SkillList items={skill.keywords} /> : null}
     </section>
@@ -26,7 +27,7 @@ const SkillName = ({ name }: { name: string }) => (
 
 const SkillList = ({ items }: { items: string[] }) => (
     <ul className="minimal skill__list">
-        {items.map((keyword: string) => (<li className="skill__list__item">{keyword} </li>))}
+        {items.map((keyword: string) => (<li key={v4()} className="skill__list__item">{keyword} </li>))}
     </ul>
 );
 

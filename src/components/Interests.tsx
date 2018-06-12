@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { v4 } from 'uuid';
 
 import { Interest, ResumeProps } from './types';
 
@@ -10,8 +11,10 @@ const InterestsSection = ({ resumeData: { interests }}: ResumeProps) => (
 )
 
 const Interest = ({ name, keywords }: Interest) => (
-    <section className="interests__item">
-        <span className="bold">{ name }</span>
+    <section key={v4()} className="interests__item">
+        <span className="bold">
+            { name }
+        </span>
         <ul className="interests__item__keyword-list">
             {keywords ? keywords.map((keyword) => (
                 <li className="interests__item__keyword-list__item">

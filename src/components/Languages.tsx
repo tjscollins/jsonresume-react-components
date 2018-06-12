@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {v4} from 'uuid';
+
 import { Language, ResumeProps } from './types';
 
 const LanguagesSection = ({ resumeData: { languages }}: ResumeProps) => (
@@ -12,7 +14,7 @@ const LanguagesSection = ({ resumeData: { languages }}: ResumeProps) => (
 );
 
 const Language = ({ language, fluency }: Language) => (
-    <li className="languages__list__item">
+    <li key={v4()} className="languages__list__item">
         {language} {fluency ?<em>({fluency})</em> : null }
     </li>
 );
