@@ -2,7 +2,7 @@
   "name": "@tjscollins/jsonresume-react-components",
   "author": "Tyler Collins <tjscollins@gmail.com> (https://tjscollins.me)",
   "description": "Components for rendering JSON resume data in react",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "dependencies": {
     "@types/uuid": "^3.4.3",
     "address-format": "0.0.3",
