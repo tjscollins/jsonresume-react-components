@@ -5,7 +5,7 @@ import { Education, ResumeProps } from './types';
 import { formatDegree } from './util';
 
 const EducationSection = ({resumeData: { education } }: ResumeProps) => (
-    <div className="container education-container">
+    <div className="container education">
         <h2>Education</h2>
 
         {education.map(Education)}
@@ -13,7 +13,7 @@ const EducationSection = ({resumeData: { education } }: ResumeProps) => (
 );
 
 const Education = (education: Education) => (
-    <section className="job item">
+    <section className="education__item">
         <SectionHeader 
             level={3} 
             name={formatDegree(education.studyType, education.area)}

@@ -6,7 +6,7 @@ import SectionHeader from './SectionHeader';
 import { ResumeProps, VolunteerWork } from './types';
 
 const Volunteering = ({resumeData: { volunteer } }: ResumeProps) => (
-    <div className="container volunteer-container">
+    <div className="container volunteering">
         <h2>Volunteer</h2>
 
         {volunteer.map(Volunteer)}
@@ -14,18 +14,19 @@ const Volunteering = ({resumeData: { volunteer } }: ResumeProps) => (
 );
 
 const Volunteer = (experience: VolunteerWork) => (
-    <section className="job item">
+    <section className="volunteerin__item">
         <SectionHeader 
+            className="volunteering__item__header"
             level={3} 
             name={experience.organization}
             website={experience.website}
             startDate={experience.startDate}
             endDate={experience.endDate}
         />
-        {experience.position ? <span className="job__role">{experience.position}</span> : null }
+        {experience.position ? <span className="volunteering__item__role">{experience.position}</span> : null }
 
         {experience.summary ?
-        <p className="summary">{experience.summary}</p> : null}
+        <p className="volunteering__item__summary">{experience.summary}</p> : null}
 
         {experience.highlights ? 
         <ul>

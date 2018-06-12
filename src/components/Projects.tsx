@@ -6,7 +6,7 @@ import SectionHeader from './SectionHeader';
 import { OSProject, ResumeProps } from './types';
 
 const ProjectSection = ({ resumeData: {projects}}: ResumeProps) => (
-    <div className="container project-container">
+    <div className="container projects">
         <h2>Open Source Projects</h2>
 
         {projects.map(Project)}
@@ -14,8 +14,9 @@ const ProjectSection = ({ resumeData: {projects}}: ResumeProps) => (
 );
 
 const Project = (project: OSProject) => (
-    <section className="item">
+    <section className="projects__item">
         <SectionHeader
+            className="projects__item__header"
             level={3}
             name={project.title}
             website={project.url}
@@ -25,16 +26,16 @@ const Project = (project: OSProject) => (
         />
 
         {project.role ? 
-            <span className="project__role">{project.role}</span> : null
+            <span className="projects__item__role">{project.role}</span> : null
         }   
 
         {project.keywords ? 
-            <ul className="project__keywords">
+            <ul className="projects__item__keywords">
                 {project.keywords.map(keyword => <li key={v4()}>{keyword}</li>)}
             </ul> : null
         }
 
-        {project.summary ? <p className="summary">{project.summary}</p> : null }
+        {project.summary ? <p className="projects__item__summary">{project.summary}</p> : null }
 
         {project.highlights ? 
             <ul>

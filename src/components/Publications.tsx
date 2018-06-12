@@ -8,7 +8,7 @@ import { Publication, ResumeProps } from './types';
 const Publications = ({ resumeData: { publications } }: ResumeProps) => {
     if (publications.length > 0) {
         return (
-            <div className="container publications-container">
+            <div className="container publications">
                 <h2>Publications</h2>
 
                 {publications.map(Publication)}
@@ -21,15 +21,16 @@ const Publications = ({ resumeData: { publications } }: ResumeProps) => {
 
 const Publication = (publication: Publication) => {
     return (
-        <section className="item">
+        <section className="publications__item">
             <SectionHeader
+                className="publications__item__header"
                 level={3}
                 name={publication.name}
                 website={publication.website}
             />
-            {publication.publisher ? <h5 className="awarder">{publication.publisher}</h5> : null }
+            {publication.publisher ? <h5 className="publications__item__publisher">{publication.publisher}</h5> : null }
 
-            {publication.summary ? <p className="summary">{publication.summary}</p> : null }
+            {publication.summary ? <p className="publications__item__summary">{publication.summary}</p> : null }
         </section>
     );
 }
