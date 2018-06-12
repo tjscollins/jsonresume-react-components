@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { v4 } from 'uuid';
+
+import SectionHeader from './SectionHeader';
+
 import { OSProject, ResumeProps } from './types';
-import { formatDate } from './util';
 
 const ProjectSection = ({ resumeData: {projects}}: ResumeProps) => (
     <div className="container project-container">
@@ -13,22 +15,14 @@ const ProjectSection = ({ resumeData: {projects}}: ResumeProps) => (
 
 const Project = (project: OSProject) => (
     <section className="item">
-        <div className="section-header clearfix">
-            <h3 className="section-header__title pull-left">
-                    <a href="{project.url}" target="_blank">
-                        {project.title}
-                    </a>
-            </h3>
-            <span className="section-header__date italic pull-right">
-                {project.startDate ? 
-                    <span className="startDate">{formatDate(project.startDate)}</span> : null 
-                }
-                {project.endDate ?
-                    <span className="endDate"> - {formatDate(project.endDate)}</span> :
-                    <span className="endDate"> - Present</span>
-                }
-            </span>
-        </div>
+        <SectionHeader
+            level={3}
+            name={project.title}
+            website={project.url}
+            startDate={project.startDate}
+            endDate={project.endDate}
+            releaseDate={project.releaseDate}
+        />
 
         {project.role ? 
             <span className="project__role">{project.role}</span> : null

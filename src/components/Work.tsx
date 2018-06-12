@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {formatDate} from './util';
+
+import SectionHeader from './SectionHeader';
 
 import { Job, ResumeProps } from './types';
 
@@ -13,13 +14,12 @@ const Work = ({ resumeData: { work }}: ResumeProps) => (
 
 const Job = (job: Job) => (
     <section className="job item">
-        <h3>{job.position}</h3>
-        <span className="section-header__date italic pull-right">
-            <span className="startDate">{formatDate(job.startDate)}</span>
-            {job.endDate ? 
-                <span className="endDate"> - {formatDate(job.endDate)}</span> :
-                <span className="endDate"> - Present</span>}
-        </span>
+        <SectionHeader
+            level={3}
+            name={job.position}
+            startDate={job.startDate}
+            endDate={job.endDate}
+        />
         <a className="job__company" href={job.website}>{job.company}</a>
         <p className="summary">{job.summary}</p>
 
