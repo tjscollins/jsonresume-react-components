@@ -1,12 +1,8 @@
 {
-  "name": "jsonresume-react-components",
-  "author": {
-      "name": "Tyler Collins",
-      "email": "tjscollins@gmail.com",
-      "url": "https://tjscollins.me"
-  },
+  "name": "@tjscollins/jsonresume-react-components",
+  "author": "Tyler Collins <tjscollins@gmail.com> (https://tjscollins.me)",
   "description": "Components for rendering JSON resume data in react",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "dependencies": {
     "@types/uuid": "^3.4.3",
     "address-format": "0.0.3",
@@ -29,5 +25,15 @@
     "@types/react": "^16.3.17",
     "@types/react-dom": "^16.0.6",
     "typescript": "^2.9.1"
-  }
+  },
+  "main": "build/static/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjscollins/jsonresume-react-components.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjscollins/jsonresume-react-components/issues"
+  },
+  "homepage": "https://github.com/tjscollins/jsonresume-react-components#readme"
 }
