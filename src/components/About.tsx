@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+import 'font-awesome/css/font-awesome.css';
+
 import { Location, ResumeBasics, ResumeProps, SocialMediaProfile } from './types';
 import { emailLink, formatAddress, notEmail, removeProtocol } from './util';
 
@@ -25,11 +27,7 @@ const Profiles = ({ profiles }: ResumeBasics) => (
 
 const Social = ({ profile }: { profile: SocialMediaProfile }) => {
     if ( profile.network && profile.username ) {
-        if (profile.network.toLowerCase() === 'linkedin') {
-            return <InfoTag text={'in/' + profile.username} icon='fab fa-linkedin' />
-        } else {
-            return <InfoTag text={profile.username} icon={`fab fa-${profile.network.toLowerCase()}`} />
-        }
+        return <InfoTag url={profile.url} text={profile.username} icon={`fab fa-${profile.network.toLowerCase()}`} />
     }
     return null;   
 }

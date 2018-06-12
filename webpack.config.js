@@ -23,6 +23,25 @@ module.exports = {
                 presets: ['env']
               }
             }
+        },
+        {
+            test: /\.css?$/,
+            use: {
+              loader: 'css-loader',
+              options: {
+                presets: ['env']
+              }
+            }
+        },
+        {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }]
         }
     ]
   },
