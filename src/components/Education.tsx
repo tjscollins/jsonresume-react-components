@@ -15,7 +15,7 @@ const EducationSection = ({resumeData: { education } }: ResumeProps) => (
 const Education = (education: Education) => (
     <section className="education__item">
         <SectionHeader
-            className="education__item"
+            className="education__item__header"
             level={3} 
             name={formatDegree(education.studyType, education.area)}
             website={education.url}
