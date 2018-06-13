@@ -4,10 +4,10 @@ import { v4 } from 'uuid';
 import { Interest, ResumeProps } from './types';
 
 const InterestsSection = ({ resumeData: { interests }}: ResumeProps) => (
-    <div className="container interests">
+    <section className="container interests">
         <h2>Interests</h2>
         {interests.map(Interest)}
-    </div>
+    </section>
 )
 
 const Interest = ({ name, keywords }: Interest) => (
