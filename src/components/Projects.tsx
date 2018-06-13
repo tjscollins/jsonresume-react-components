@@ -38,7 +38,7 @@ const Project = (project: OSProject) => (
         {project.summary ? <p className="projects__item__summary">{project.summary}</p> : null }
 
         {project.highlights ? 
-            <ul>
+            <ul className="projects__item__highlights">
                 {project.highlights.map(hl => <li key={v4()}>{hl}</li>)}
             </ul> : null }
     </section>
