@@ -5,11 +5,11 @@ import SectionHeader from './SectionHeader';
 import { Job, ResumeProps } from './types';
 
 const Work = ({ resumeData: { work }}: ResumeProps) => (
-    <div className="container work">
+    <section className="container work">
         <h2>Work Experience</h2>
 
         {work.map(Job)}
-    </div>
+    </section>
 );
 
 const Job = (job: Job) => (

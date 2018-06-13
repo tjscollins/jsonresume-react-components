@@ -6,11 +6,11 @@ import SectionHeader from './SectionHeader';
 import { OSProject, ResumeProps } from './types';
 
 const ProjectSection = ({ resumeData: {projects}}: ResumeProps) => (
-    <div className="container projects">
+    <section className="container projects">
         <h2>Open Source Projects</h2>
 
         {projects.map(Project)}
-    </div>
+    </section>
 );
 
 const Project = (project: OSProject) => (

@@ -8,11 +8,11 @@ import { Publication, ResumeProps } from './types';
 const Publications = ({ resumeData: { publications } }: ResumeProps) => {
     if (publications.length > 0) {
         return (
-            <div className="container publications">
+            <section className="container publications">
                 <h2>Publications</h2>
 
                 {publications.map(Publication)}
-            </div>
+            </section>
         )
     } else {
         return null;
