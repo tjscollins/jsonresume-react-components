@@ -29,7 +29,7 @@ const Volunteer = (experience: VolunteerWork) => (
         <p className="volunteering__item__summary">{experience.summary}</p> : null}
 
         {experience.highlights ? 
-        <ul>
+        <ul className="volunteering__item__highlights">
             {experience.highlights.map(hl => <li key={v4()}>{hl}</li>)}
         </ul> : null }
     </section>
