@@ -24,7 +24,7 @@ const Education = (education: Education) => (
         {education.specialization ? <span className="education__item__specialization">{education.specialization}</span> : null }
 
         <div>
-            <span className="education__item__type-area">
+            <span className="education__item__institution">
                 {education.institution}
             </span>
             {education.location ?
@@ -34,7 +34,7 @@ const Education = (education: Education) => (
         </div>
 
         {education.courses ? 
-        <ul className="education__item__courses two-column">
+        <ul className="education__item__courses">
             {education.courses.map(hl => <li key={v4()}>{hl}</li>)}
         </ul> : null }
     </section>
