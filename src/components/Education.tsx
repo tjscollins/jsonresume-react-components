@@ -23,7 +23,7 @@ const Education = (education: Education) => (
         />
         {education.specialization ? <span className="education__item__specialization">{education.specialization}</span> : null }
 
-        <div>
+        <div className="education__item__details">
             <span className="education__item__institution">
                 {education.institution}
             </span>
