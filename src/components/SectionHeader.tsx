@@ -9,17 +9,25 @@ class DynamicHeader extends React.Component<{level: number} & React.HTMLAttribut
         switch (level) {
             case 1:
                 this.HeaderComp = (props) => <h1 {...props} />;
+                break;
             case 2:
                 this.HeaderComp = (props) => <h2 {...props} />;
+                break;
             case 3:
                 this.HeaderComp = (props) => <h3 {...props} />;
+                break;
             case 4:
                 this.HeaderComp = (props) => <h4 {...props} />;
+                break;
             case 5:
                 this.HeaderComp = (props) => <h5 {...props} />;
+                break;
             case 6:
                 this.HeaderComp = (props) => <h6 {...props} />;
-                                            
+                break;
+            default:
+                this.HeaderComp = (props) => <span {...props} />;
+                break;                      
         }
         return (
             <this.HeaderComp {...htmlProps} />
