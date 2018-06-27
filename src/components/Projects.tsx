@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { v4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 
 import SectionHeader from './SectionHeader';
 
@@ -14,7 +14,10 @@ const ProjectSection = ({ resumeData: {projects}}: ResumeProps) => (
 );
 
 const Project = (project: OSProject) => (
-    <section className="projects__item">
+    <section 
+        key={uuidv4()}
+        className="projects__item"
+    >
         <SectionHeader
             className="projects__item__header"
             level={3}
@@ -31,7 +34,7 @@ const Project = (project: OSProject) => (
 
         {project.keywords ? 
             <ul className="projects__item__keywords">
-                {project.keywords.map(keyword => <li key={v4()}>{keyword}</li>)}
+                {project.keywords.map(keyword => <li key={uuidv4()}>{keyword}</li>)}
             </ul> : null
         }
 
@@ -39,7 +42,7 @@ const Project = (project: OSProject) => (
 
         {project.highlights ? 
             <ul className="projects__item__highlights">
-                {project.highlights.map(hl => <li key={v4()}>{hl}</li>)}
+                {project.highlights.map(hl => <li key={uuidv4()}>{hl}</li>)}
             </ul> : null }
     </section>
 );

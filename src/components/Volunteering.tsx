@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {v4} from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 
 import SectionHeader from './SectionHeader';
 
@@ -14,7 +14,10 @@ const Volunteering = ({resumeData: { volunteer } }: ResumeProps) => (
 );
 
 const Volunteer = (experience: VolunteerWork) => (
-    <section className="volunteerin__item">
+    <section 
+        key={uuidv4()}
+        className="volunteerin__item"
+    >
         <SectionHeader 
             className="volunteering__item__header"
             level={3} 
@@ -30,7 +33,7 @@ const Volunteer = (experience: VolunteerWork) => (
 
         {experience.highlights ? 
         <ul className="volunteering__item__highlights">
-            {experience.highlights.map(hl => <li key={v4()}>{hl}</li>)}
+            {experience.highlights.map(hl => <li key={uuidv4()}>{hl}</li>)}
         </ul> : null }
     </section>
 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 import { Reference, ResumeProps } from './types';
 
@@ -19,7 +20,10 @@ const References = ({ resumeData: { references } }: ResumeProps) => {
 
 const SingleReference = (reference: Reference) => {
     return (
-        <section className="item">
+        <section 
+            key={uuidv4()}
+            className="item"
+        >
             {reference.reference ?
                 <div>
                     <i 

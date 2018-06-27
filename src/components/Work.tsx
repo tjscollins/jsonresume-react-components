@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 import SectionHeader from './SectionHeader';
 
@@ -13,7 +14,10 @@ const Work = ({ resumeData: { work }}: ResumeProps) => (
 );
 
 const Job = (job: Job) => (
-    <section className="work__job">
+    <section 
+        key={uuidv4()}
+        className="work__job"
+    >
         <SectionHeader
             className="work__job__header"
             level={3}

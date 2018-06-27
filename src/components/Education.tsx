@@ -13,7 +13,10 @@ const EducationSection = ({resumeData: { education } }: ResumeProps) => (
 );
 
 const Education = (education: Education) => (
-    <section className="education__item">
+    <section 
+        key={v4()}
+        className="education__item"
+    >
         <SectionHeader
             className="education__item__header"
             level={3} 

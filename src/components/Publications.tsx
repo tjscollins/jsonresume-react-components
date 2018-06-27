@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import SectionHeader from './SectionHeader';
 
@@ -21,7 +22,10 @@ const Publications = ({ resumeData: { publications } }: ResumeProps) => {
 
 const Publication = (publication: Publication) => {
     return (
-        <section className="publications__item">
+        <section 
+            key={uuidv4()}
+            className="publications__item"
+        >
             <SectionHeader
                 className="publications__item__header"
                 level={3}
