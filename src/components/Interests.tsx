@@ -17,7 +17,7 @@ const Interest = ({ name, keywords }: Interest) => (
         </span>
         <ul className="interests__item__keyword-list">
             {keywords ? keywords.map((keyword) => (
-                <li className="interests__item__keyword-list__item">
+                <li key={v4()} className="interests__item__keyword-list__item">
                     {keyword}
                 </li>
             )) : null}

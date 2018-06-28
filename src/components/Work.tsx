@@ -32,7 +32,12 @@ const Job = (job: Job) => (
             {job.highlights ?
                 job.highlights.map(
                     (highlight) => (
-                        <li className="work__job__highlights__item">{highlight}</li>
+                        <li 
+                            key={uuidv4()} 
+                            className="work__job__highlights__item"
+                        >
+                            {highlight}
+                        </li>
                     )
                 ) :
                 null
